@@ -1,7 +1,7 @@
 # The configuration for each message of SellMe
 
 # Use & instead of double S for a quicker colorizing of texts
-prefix: '&l&d[SellMe]'
+prefix: '&d&kkk&r&l&b[SellMe++]&r&d&kkk&r'
 
 # seperator seperates the message from the prefix
 # Format looks like:

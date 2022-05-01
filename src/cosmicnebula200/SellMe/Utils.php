@@ -2,7 +2,7 @@
 
 namespace cosmicnebula200\SellMe;
 
-use pocketmine\block\VanillaBlocks;
+use cosmicnebula200\Econ\Econ;
 use pocketmine\item\Item;
 use pocketmine\player\Player;
 
@@ -14,7 +14,7 @@ class Utils
         $amount = self::getAmount($item);
         if ($amount === 0)
         return false;
-        SellMe::getInstance()->getEconomyProvider()->addToMoney($player, $amount * $item->getCount());
+        Econ::getInstance()->addToBal($player, Econ::getInstance()->getConfig()->get("primary-currency"), $amount * $item->getCount());
         return true;
     }
 

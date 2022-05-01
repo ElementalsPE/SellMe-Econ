@@ -3,6 +3,8 @@
 namespace cosmicnebula200\SellMe\commands\subcommands;
 
 use CortexPE\Commando\BaseSubCommand;
+use cosmicnebula200\Econ\Econ;
+use cosmicnebula200\ElementalsSkyBlock\permissions\Permissions;
 use cosmicnebula200\SellMe\SellMe;
 use cosmicnebula200\SellMe\Utils;
 use pocketmine\block\VanillaBlocks;
@@ -14,9 +16,12 @@ class InvSubCommand extends BaseSubCommand
 
     protected function prepare(): void
     {
-        $this->setPermission('sellme.command.sell.inv');
+        $this->setPermission(Permissions::DEFAULT);
     }
 
+    /**
+     * @throws \cosmicnebula200\Econ\Exceptions\NotRegisteredCurrency
+     */
     public function onRun(CommandSender $sender, string $aliasUsed, array $args): void
     {
         if (!$sender instanceof Player)
@@ -39,7 +44,7 @@ class InvSubCommand extends BaseSubCommand
         $sender->sendMessage(SellMe::$messages->getMessage('sell.inv',[
             'amount' => $amount
         ]));
-        SellMe::getInstance()->getEconomyProvider()->addToMoney($sender, $amount);
+        Econ::getInstance()->addToBal($sender->getName(), Econ::getInstance()->getConfig()->get("primary-currency"), $amount);
     }
 
 }
