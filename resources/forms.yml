@@ -1,21 +1,21 @@
 sell-form:
-  title: "&l&dSell Form"
-  hand: "&l&dSell Hand"
-  all: "&l&dSell All"
-  inv: "&l&dSell Inventory"
-  list: "&l&dSell List"
+  title: "&l&cElementals &eSell"
+  hand: "&l&cSell &eHand"
+  all: "&l&cSell &eAll"
+  inv: "&l&cSell &eInventory"
+  list: "&l&cSell &eList"
 
 sell-list:
-  title: "&l&dSell List"
-  label: "&7[&a*&7]&e {ITEM}&e: &a{PRICE}"
+  title: "&l&cElementals &eSell-List"
+  label: "&d[&a*&d]&c {ITEM}&e: &a{PRICE}"
 
 check-form:
-  title: "&l&dCheck Form"
-  hand: "&l&dCheck Hand"
-  all: "&l&dCheckl All"
-  inv: "&l&dCheck Inventory"
+  title: "&l&cCheck &eForm"
+  hand: "&l&cCheck &eHand"
+  all: "&l&cCheckl &eAll"
+  inv: "&l&cCheck &eInventory"
 
 autosell-form:
-  title: "&l&dAutoSell Form"
-  on: "&l&dOn"
-  off: "&l&dOff"
+  title: "&l&cElementals &eAutoSell"
+  on: "&l&a[On]"
+  off: "&l&4[Off]"

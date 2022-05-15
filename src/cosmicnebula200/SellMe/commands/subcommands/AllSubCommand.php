@@ -3,6 +3,7 @@
 namespace cosmicnebula200\SellMe\commands\subcommands;
 
 use CortexPE\Commando\BaseSubCommand;
+use cosmicnebula200\ElementalsSkyBlock\permissions\Permissions;
 use cosmicnebula200\SellMe\SellMe;
 use cosmicnebula200\SellMe\Utils;
 use pocketmine\block\VanillaBlocks;
@@ -14,7 +15,7 @@ class AllSubCommand extends BaseSubCommand
 
     protected function prepare(): void
     {
-        $this->setPermission('sellme.command.sell.all');
+        $this->setPermission(Permissions::DEFAULT);
     }
 
     public function onRun(CommandSender $sender, string $aliasUsed, array $args): void
