@@ -5,6 +5,7 @@ branches:
 projects:
   SellMe:
     path: ""
+    icon: 'sell.png'
     lint:
       phpstan: false
     libs:
@@ -13,4 +14,6 @@ projects:
         branch: PM4
       - src: muqsit/simplepackethandler/SimplePacketHandler
         version: ^0.0.1
+      - src: Vecnavium/FormsUI/FormsUI
+        version: ^1.1.2
 ...

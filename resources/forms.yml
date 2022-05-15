@@ -3,6 +3,17 @@ sell-form:
   hand: "&l&cSell &eHand"
   all: "&l&cSell &eAll"
   inv: "&l&cSell &eInventory"
+  list: "&l&cSell &eList"
+
+sell-list:
+  title: "&l&cElementals &eSell-List"
+  label: "&d[&a*&d]&c {ITEM}&e: &a{PRICE}"
+
+check-form:
+  title: "&l&cCheck &eForm"
+  hand: "&l&cCheck &eHand"
+  all: "&l&cCheckl &eAll"
+  inv: "&l&cCheck &eInventory"
 
 autosell-form:
   title: "&l&cElementals &eAutoSell"
