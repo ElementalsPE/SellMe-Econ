@@ -4,6 +4,8 @@ namespace cosmicnebula200\SellMe;
 
 
 use cosmicnebula200\Econ\Econ;
+use pocketmine\block\tile\Chest;
+use pocketmine\block\VanillaBlocks;
 use pocketmine\item\Item;
 use pocketmine\item\ItemFactory;
 use pocketmine\player\Player;
@@ -18,6 +20,21 @@ class Utils
         return false;
         Econ::getInstance()->addToBal($player, Econ::getInstance()->getConfig()->get("primary-currency"), $amount * $item->getCount());
         return true;
+    }
+
+    public function sellChest(Player $player, Chest $chest, int $multiplier = 1): int
+    {
+        $inv = $chest->getInventory();
+        $amount = 0;
+        foreach ($inv->getContents() as $index => $item)
+        {
+            if (Utils::getAmount($item) !== 0)
+            {
+                $amount += (Utils::getAmount($item) * $item->getCount());
+                $inv->setItem($index, VanillaBlocks::AIR()->asItem());
+            }
+        }
+        return $amount * $multiplier;
     }
 
     public static function getAmount(Item $item): int
