@@ -22,7 +22,7 @@ class Utils
         return true;
     }
 
-    public function sellChest(Chest $chest, int $multiplier = 1): int
+    public static function sellChest(Chest $chest, int $multiplier = 1): int
     {
         $inv = $chest->getInventory();
         $amount = 0;
