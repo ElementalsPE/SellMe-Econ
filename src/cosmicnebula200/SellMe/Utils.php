@@ -18,7 +18,7 @@ class Utils
         $amount = self::getAmount($item);
         if ($amount === 0)
         return false;
-        Econ::getInstance()->addToBal($player, Econ::getInstance()->getConfig()->get("primary-currency"), $amount * $item->getCount());
+        Econ::getInstance()->addToBal($player->getName(), Econ::getInstance()->getConfig()->get("primary-currency"), $amount * $item->getCount());
         return true;
     }
 
